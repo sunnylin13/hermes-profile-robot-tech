@@ -1,0 +1,10 @@
+# cronjob.yaml — 範例：每日檢查 Hermes release 的 cronjob 設定
+
+schedule: "0 8 * * *"  # 每天 08:00
+prompt: |
+  Check NousResearch/hermes-agent releases. If a new official release is found, analyze the changelog for security, P0/P1, breaking changes, or migration notes. If any of those are present, prepare a short summary and recommend preflight checks and an upgrade plan. Otherwise, do not send a notification.
+
+skills:
+  - devops/hermes-release-monitor
+
+# 設定建議：在建立實際 cronjob 時，使用 `deliver: origin` 以把結果回傳到本 chat

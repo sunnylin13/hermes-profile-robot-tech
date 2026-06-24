@@ -1,0 +1,17 @@
+profile_config_template.yaml — Example Hermes profile config for graph-backed skill
+
+# Example config to adapt when creating a Hermes profile for a Logseq graph
+profile:
+  name: home_work
+  model: gpt-5-mini
+  gateway: false
+  alias: home_work
+
+graph:
+  path: D:\_oneDrive\OneDrive_Mirle\_kb\home_work
+  ingest_rules: references/home_work_WIKI_RULES.md
+
+# Safety: do not auto-register without user approval
+notes:
+  - Keep approvals.mode=manual to prevent accidental writes
+  - Remove or redact any API keys before committing
