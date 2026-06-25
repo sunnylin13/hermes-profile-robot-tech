@@ -44,6 +44,7 @@ browser_screenshots/
 cache/
 pastes/
 *-snapshots/
+.skills_prompt_snapshot.json
 # temporary files
 *_cache.*
 *.imported
